@@ -20,8 +20,8 @@ const latestProjects = computed(() => {
 
 <template>
   <main class="w-full min-h-screen text-gray-900 font-mono bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100">
-    <section class="h-screen flex flex-col items-center justify-center text-center px-6 relative">
-      <h1 class="text-5xl md:text-7xl font-semibold drop-shadow-lg mb-4 select-none bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text text-transparent">LookAtFr3sn0</h1>
+    <section class="h-screen flex flex-col items-center justify-center text-center px-6 relative bg-gradient-to-b from-black/5 via-transparent to-transparent">
+      <h1 class="text-6xl md:text-8xl font-semibold drop-shadow-lg mb-4 select-none animate-fade-in bg-gradient-to-r from-blue-500 via-purple-400 to-pink-400 bg-clip-text text-transparent">LookAtFr3sn0</h1>
       <div class="flex gap-4 text-sm md:text-lg lg:text-xl text-gray-600 mb-8 items-center justify-center">
         <p>Software developer</p>
         <span class="h-4 w-px rounded-full bg-gray-400 inline-block"></span>
