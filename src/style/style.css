@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+.separate-x > * { 
+    @apply border-r-3 mr-2 pr-2 border-gray-300;
+}
+.separate-x > *:last-child {
+    @apply border-0 mr-0 pr-0;
+}
+
+.separate-y > * {
+    @apply border-b-3 mb-2 pb-2 border-gray-300;
+}
+.separate-y > *:last-child {
+    @apply border-0 mb-0 pb-0;
+}
