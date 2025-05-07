@@ -19,7 +19,14 @@ const latestProjects = computed(() => {
 </script>
 
 <template>
-  <main class="w-full min-h-screen text-gray-900 font-mono bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100">
+  <main class="w-full min-h-screen text-gray-900 font-mono bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 relative">
+
+    <div class="pointer-events-none inset-0 z-0">
+      <span class="floating-shape bg-blue-300/40 top-[10%] left-[10%] w-20 h-20"></span>
+      <span class="floating-shape bg-pink-300/40 top-[60%] left-[80%] w-14 h-14" style="animation-delay: 2s;"></span>
+      <span class="floating-shape bg-purple-300/40 top-[30%] left-[60%] w-24 h-24" style="animation-delay: 4s;"></span>
+    </div>
+
     <section class="h-screen flex flex-col items-center justify-center text-center px-6 relative bg-gradient-to-b from-black/5 via-transparent to-transparent">
       <h1 class="text-6xl md:text-8xl font-semibold drop-shadow-lg mb-4 select-none animate-fade-in bg-gradient-to-r from-blue-500 via-purple-400 to-pink-400 bg-clip-text text-transparent">LookAtFr3sn0</h1>
       <div class="flex gap-4 text-sm md:text-lg lg:text-xl text-gray-600 mb-8 items-center justify-center">
@@ -72,3 +79,15 @@ const latestProjects = computed(() => {
     </footer>
   </main>
 </template>
+
+<style scoped>
+.floating-shape {
+  @apply rounded-full blur-xs absolute;
+  animation: float 8s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0) scale(1);}
+  to { transform: translateY(-30px) scale(1.08);}
+}
+</style>
