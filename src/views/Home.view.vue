@@ -34,9 +34,10 @@ onMounted(async () => {
   <main class="w-full min-h-screen text-gray-900 font-mono bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 relative">
 
     <div class="pointer-events-none inset-0 z-0">
-      <span class="floating-shape bg-blue-300/40 top-[10%] left-[10%] w-20 h-20"></span>
-      <span class="floating-shape bg-pink-300/40 top-[60%] left-[80%] w-14 h-14" style="animation-delay: 2s;"></span>
-      <span class="floating-shape bg-purple-300/40 top-[30%] left-[60%] w-24 h-24" style="animation-delay: 4s;"></span>
+      <span class="floating-shape bg-gradient-to-br from-blue-300/60 via-cyan-300/40 to-green-200/40 top-[10%] left-[15%] w-20 h-20 animate-color-splash"></span>
+      <span class="floating-shape bg-gradient-to-br from-pink-300/60 via-fuchsia-300/40 to-purple-200/40 top-[60%] left-[80%] w-14 h-14 animate-color-splash" style="animation-delay: 2s;"></span>
+      <span class="floating-shape bg-gradient-to-br from-purple-300/60 via-indigo-300/40 to-blue-200/40 top-[30%] left-[60%] w-24 h-24 animate-color-splash" style="animation-delay: 4s;"></span>
+      <span class="floating-shape bg-gradient-to-br from-yellow-200/60 via-orange-200/40 to-pink-200/40 top-[80%] left-[10%] w-16 h-16 animate-color-splash" style="animation-delay: 1.5s;"></span>
     </div>
 
     <section class="h-screen flex flex-col items-center justify-center text-center px-6 relative bg-gradient-to-b from-black/5 via-transparent to-transparent">
