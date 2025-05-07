@@ -1,5 +1,6 @@
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted, nextTick } from 'vue';
+import gsap from 'gsap';
 import scrollTo from '@/utils/scrollTo.js';
 import projects from '/assets/projects.json?url';
 
@@ -16,6 +17,17 @@ const latestProjects = computed(() => {
     .slice(0, 3);
 });
 
+onMounted(async () => {
+  await nextTick();
+  gsap.from('.floating-shape', {
+    opacity: 0,
+    scale: 0.7,
+    stagger: 0.2,
+    duration: 1.2,
+    delay: 0.2,
+    ease: 'back.out(1.7)',
+  });
+})
 </script>
 
 <template>
@@ -28,8 +40,8 @@ const latestProjects = computed(() => {
     </div>
 
     <section class="h-screen flex flex-col items-center justify-center text-center px-6 relative bg-gradient-to-b from-black/5 via-transparent to-transparent">
-      <h1 class="text-6xl md:text-8xl font-semibold drop-shadow-lg mb-4 select-none animate-fade-in bg-gradient-to-r from-blue-500 via-purple-400 to-pink-400 bg-clip-text text-transparent">LookAtFr3sn0</h1>
-      <div class="flex gap-4 text-sm md:text-lg lg:text-xl text-gray-600 mb-8 items-center justify-center">
+      <h1 class="text-6xl md:text-8xl font-semibold drop-shadow-lg mb-4 select-none animate-fade-in bg-gradient-to-r from-blue-500 via-purple-400 to-pink-400 bg-clip-text text-transparent" id="title">LookAtFr3sn0</h1>
+      <div class="flex gap-4 text-sm md:text-lg lg:text-xl text-gray-600 mb-8 items-center justify-center" id="subtitle">
         <p class="animate-fade-in opacity-0" style="animation-delay:0.2s">Software developer</p>
         <span class="animate-fade-in opacity-0 h-4 w-px rounded-full bg-gray-400 inline-block" style="animation-delay: 0.4s;"></span>
         <p class="animate-fade-in opacity-0" style="animation-delay:0.45s">Game developer</p>
