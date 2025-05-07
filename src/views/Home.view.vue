@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 import scrollTo from '@/utils/scrollTo.js';
-import projects from '@/assets/projects.json';
+import projects from '/assets/projects.json?url';
 
 const featuredProjects = computed(() => {
   return [...projects]
