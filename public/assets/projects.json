@@ -1,23 +1,2 @@
 [
-  {
-    "id": 1,
-    "name": "Sample Project",
-    "description": "Short description here",
-    "featured": true,
-    "image": ""
-  },
-  {
-    "id": 2,
-    "name": "Visual Demo",
-    "featured": false,
-    "description": "Another short line",
-    "image": ""
-  },
-  {
-    "id": 3,
-    "name": "3D Environment",
-    "featured": false,
-    "description": "A third item",
-    "image": ""
-  }
 ]
