@@ -50,7 +50,7 @@ onMounted(async () => {
         <p class="animate-fade-in opacity-0" style="animation-delay:0.65s">3D artist</p>
       </div>
       <button
-        class="cursor-pointer border border-gray-900 px-6 py-2 text-sm uppercase tracking-widest rounded-full bg-white/40 backdrop-blur-md shadow-md hover:bg-gray-900 hover:text-white transition-all duration-200 font-semibold select-none"
+        class="animate-fade-in opacity-0 cursor-pointer border border-gray-900 px-6 py-2 text-sm uppercase tracking-widest rounded-full bg-white/40 backdrop-blur-md shadow-md hover:bg-gray-900 hover:text-white transition-all duration-200 font-semibold select-none" style="animation-delay: 1s;"
         @click="scrollTo('featured')"
       >
         View Portfolio
