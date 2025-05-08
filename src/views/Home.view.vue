@@ -119,10 +119,11 @@ onMounted(async () => {
     </section>
 
     <footer class="text-center py-12 text-sm text-gray-500">
-      <div class="space-x-4">
-        <a class="hover:underline" href="https://github.com/LookAtFr3sn0" target="_blank" >GitHub</a>
-        <a class="hover:underline" href="https://linkedin.com/in/francescogiammari/" target="_blank" >LinkedIn</a>
-        <a class="hover:underline" :href="'mailto:' + 'contact' + '&commat;' + 'lookatfr3sn0.com'">Email</a>
+      <div class="flex gap-4 *:hover:underline">
+        <a href="https://github.com/LookAtFr3sn0/Drift" target="_blank">Source</a>
+        <a href="https://github.com/LookAtFr3sn0" target="_blank" >GitHub</a>
+        <a href="https://linkedin.com/in/francescogiammari/" target="_blank" >LinkedIn</a>
+        <a :href="'mailto:' + 'contact' + '&commat;' + 'lookatfr3sn0.com'">Email</a>
       </div>
     </footer>
   </main>
