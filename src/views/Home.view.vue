@@ -51,7 +51,7 @@ onMounted(async () => {
       </div>
       <button
         class="animate-fade-in opacity-0 cursor-pointer border border-gray-900 px-6 py-2 text-sm uppercase tracking-widest rounded-full bg-white/40 backdrop-blur-md shadow-md hover:bg-gray-900 hover:text-white transition-all duration-200 font-semibold select-none" style="animation-delay: 1s;"
-        @click="scrollTo('featured')"
+        @click="scrollTo('skills')"
       >
         View Portfolio
       </button>
@@ -91,7 +91,7 @@ onMounted(async () => {
       </div>
     </section>
 
-    <section class="max-w-6xl py-20 px-6 mx-auto">
+    <section class="max-w-6xl py-20 px-6 mx-auto" v-if="featuredProjects.length > 0">
       <h2 class="text-3xl font-bold mb-12 text-center" id="featured">Featured Projects</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-10" :class="featuredProjects.length > 2 && 'lg:grid-cols-3'">
         <div class="group cursor-pointer duration-200 transform hover:scale-105 rounded-2xl shadow-xl bg-white/60 backdrop-blur-md border border-gray-200 hover:border-gray-900 transition-all" v-for="project in featuredProjects" :key="project.id">
