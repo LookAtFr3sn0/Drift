@@ -58,6 +58,40 @@ onMounted(async () => {
     </section>
 
     <section class="max-w-6xl py-20 px-6 mx-auto">
+      <h2 class="text-3xl font-bold mb-12 text-center" id="skills">Skills & Technologies</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center *:*:first:select-none">
+        <div class="flex flex-col items-center">
+            <img class="w-10 h-10 mb-2" src="/src/assets/vue.svg" alt="Vue.js logo" />
+          <span class="font-semibold">Vue.js</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-10 h-10 mb-2" src="/src/assets/react.svg" alt="React logo" />
+          <span class="font-semibold">React</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-10 h-10 mb-2" src="/src/assets/tailwind.svg" />
+          <span class="font-semibold">TailwindCSS</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-10 h-10 mb-2" src="/src/assets/ts.svg" alt="TypeScript logo" />
+          <span class="font-semibold">TypeScript</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-10 h-10 mb-2" src="/src/assets/node.svg" />
+          <span class="font-semibold">Node.js</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-10 h-10 mb-2" src="/src/assets/postgres.svg" alt="PostgreSQL logo" />
+          <span class="font-semibold">PostgreSQL</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-10 h-10 mb-2" src="/src/assets/blender.png" alt="Blender logo" />
+          <span class="font-semibold">Blender</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl py-20 px-6 mx-auto">
       <h2 class="text-3xl font-bold mb-12 text-center" id="featured">Featured Projects</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-10" :class="featuredProjects.length > 2 && 'lg:grid-cols-3'">
         <div class="group cursor-pointer duration-200 transform hover:scale-105 rounded-2xl shadow-xl bg-white/60 backdrop-blur-md border border-gray-200 hover:border-gray-900 transition-all" v-for="project in featuredProjects" :key="project.id">
@@ -95,7 +129,7 @@ onMounted(async () => {
 
 <style scoped>
 .floating-shape {
-  @apply rounded-full blur-xs absolute;
+  @apply rounded-full blur-[4px] absolute;
   animation: float 8s ease-in-out infinite alternate;
 }
 
