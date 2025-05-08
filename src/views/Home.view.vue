@@ -2,7 +2,7 @@
 import { ref, computed, onMounted, nextTick } from 'vue';
 import gsap from 'gsap';
 import scrollTo from '@/utils/scrollTo.js';
-import projects from '/assets/projects.json?url';
+import projects from '/src/assets/projects.json';
 
 const featuredProjects = computed(() => {
   return [...projects]
@@ -104,7 +104,7 @@ onMounted(async () => {
       </div>
     </section>
 
-    <section class="max-w-6xl py-20 px-6 mx-auto">
+    <section class="max-w-6xl py-20 px-6 mx-auto" v-if="latestProjects.length > 0">
       <h2 class="text-3xl font-bold mb-12 text-center" id="featured">Latest Projects</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-10" :class="latestProjects.length > 2 && 'lg:grid-cols-3'">
         <div class="group cursor-pointer duration-200 transform hover:scale-105 rounded-2xl shadow-xl bg-white/60 backdrop-blur-md border border-gray-200 hover:border-gray-900 transition-all" v-for="project in latestProjects" :key="project.id">
