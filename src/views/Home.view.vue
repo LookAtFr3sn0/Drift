@@ -119,7 +119,7 @@ onMounted(async () => {
     </section>
 
     <footer class="text-center py-12 text-sm text-gray-500">
-      <div class="flex gap-4 *:hover:underline">
+      <div class="flex gap-4 items-center justify-center *:hover:underline">
         <a href="https://github.com/LookAtFr3sn0/Drift" target="_blank">Source</a>
         <a href="https://github.com/LookAtFr3sn0" target="_blank" >GitHub</a>
         <a href="https://linkedin.com/in/francescogiammari/" target="_blank" >LinkedIn</a>
