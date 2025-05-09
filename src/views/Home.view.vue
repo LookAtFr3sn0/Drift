@@ -96,9 +96,11 @@ onMounted(async () => {
       <h2 class="text-3xl font-bold mb-12 text-center" id="featured">Featured Projects</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-10" :class="featuredProjects.length > 2 && 'lg:grid-cols-3'">
         <div class="group cursor-pointer duration-200 transform hover:scale-105 rounded-2xl shadow-xl bg-white/60 backdrop-blur-md border border-gray-200 hover:border-gray-900 transition-all" v-for="project in featuredProjects" :key="project.id">
-          <img class="w-full h-60 object-fit rounded-t-2xl" :src="project.image" :alt="project.name + ' thumbnail'" />
-          <div class="p-6">
-            <h3 class="text-lg font-semibold mb-2">{{ project.name }}</h3>
+          <div class="flex items-center gap-3 p-6 pb-0">
+            <img class="w-12 h-12" :src="project.image" :alt="project.name + ' icon'" />
+            <h3 class="text-lg font-semibold">{{ project.name }}</h3>
+          </div>
+          <div class="p-6 pt-2">
             <p class="text-sm text-gray-500 group-hover:underline">{{ project.description }}</p>
           </div>
         </div>
@@ -109,9 +111,11 @@ onMounted(async () => {
       <h2 class="text-3xl font-bold mb-12 text-center" id="featured">Latest Projects</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-10" :class="latestProjects.length > 2 && 'lg:grid-cols-3'">
         <div class="group cursor-pointer duration-200 transform hover:scale-105 rounded-2xl shadow-xl bg-white/60 backdrop-blur-md border border-gray-200 hover:border-gray-900 transition-all" v-for="project in latestProjects" :key="project.id">
-          <img class="w-full h-60 object-fit rounded-t-2xl" :src="project.image" :alt="project.name + ' thumbnail'" />
-          <div class="p-6">
+          <div class="flex items-center gap-3 p-6 pb-0">
+            <img class="w-12 h-12" :src="project.image" :alt="project.name + ' icon'" />
             <h3 class="text-lg font-semibold mb-2">{{ project.name }}</h3>
+          </div>
+          <div class="p-6 pt-2">
             <p class="text-sm text-gray-500 group-hover:underline">{{ project.description }}</p>
           </div>
         </div>
