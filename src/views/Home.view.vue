@@ -96,7 +96,7 @@ onMounted(async () => {
       <h2 class="text-3xl font-bold mb-12 text-center" id="featured">Featured Projects</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-10" :class="featuredProjects.length > 2 && 'lg:grid-cols-3'">
         <div class="group cursor-pointer duration-200 transform hover:scale-105 rounded-2xl shadow-xl bg-white/60 backdrop-blur-md border border-gray-200 hover:border-gray-900 transition-all" v-for="project in featuredProjects" :key="project.id">
-          <img class="w-full h-60 object-cover rounded-t-2xl" :src="project.image" :alt="project.name + ' thumbnail'" />
+          <img class="w-full h-60 object-fit rounded-t-2xl" :src="project.image" :alt="project.name + ' thumbnail'" />
           <div class="p-6">
             <h3 class="text-lg font-semibold mb-2">{{ project.name }}</h3>
             <p class="text-sm text-gray-500 group-hover:underline">{{ project.description }}</p>
@@ -109,7 +109,7 @@ onMounted(async () => {
       <h2 class="text-3xl font-bold mb-12 text-center" id="featured">Latest Projects</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-10" :class="latestProjects.length > 2 && 'lg:grid-cols-3'">
         <div class="group cursor-pointer duration-200 transform hover:scale-105 rounded-2xl shadow-xl bg-white/60 backdrop-blur-md border border-gray-200 hover:border-gray-900 transition-all" v-for="project in latestProjects" :key="project.id">
-          <img class="w-full h-60 object-cover rounded-t-2xl" :src="project.image" :alt="project.name + ' thumbnail'" />
+          <img class="w-full h-60 object-fit rounded-t-2xl" :src="project.image" :alt="project.name + ' thumbnail'" />
           <div class="p-6">
             <h3 class="text-lg font-semibold mb-2">{{ project.name }}</h3>
             <p class="text-sm text-gray-500 group-hover:underline">{{ project.description }}</p>
