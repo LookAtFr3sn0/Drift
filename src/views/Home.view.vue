@@ -132,15 +132,3 @@ onMounted(async () => {
     </footer>
   </main>
 </template>
-
-<style scoped>
-.floating-shape {
-  @apply rounded-full blur-[4px] absolute;
-  animation: float 8s ease-in-out infinite alternate;
-}
-
-@keyframes float {
-  from { transform: translateY(0) scale(1);}
-  to { transform: translateY(-30px) scale(1.08);}
-}
-</style>
