@@ -62,31 +62,31 @@ onMounted(async () => {
       <h2 class="text-3xl font-bold mb-12 text-center" id="skills">Skills & Technologies</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center *:*:first:select-none">
         <div class="flex flex-col items-center">
-            <img class="w-10 h-10 mb-2" src="/src/assets/vue.svg" alt="Vue.js logo" />
+            <img class="w-10 h-10 mb-2 pointer-events-none select-none" src="/src/assets/vue.svg" alt="Vue.js logo" />
           <span class="font-semibold">Vue.js</span>
         </div>
         <div class="flex flex-col items-center">
-          <img class="w-10 h-10 mb-2" src="/src/assets/react.svg" alt="React logo" />
+          <img class="w-10 h-10 mb-2 pointer-events-none select-none" src="/src/assets/react.svg" alt="React logo" />
           <span class="font-semibold">React</span>
         </div>
         <div class="flex flex-col items-center">
-          <img class="w-10 h-10 mb-2" src="/src/assets/tailwind.svg" />
+          <img class="w-10 h-10 mb-2 pointer-events-none select-none" src="/src/assets/tailwind.svg" />
           <span class="font-semibold">TailwindCSS</span>
         </div>
         <div class="flex flex-col items-center">
-          <img class="w-10 h-10 mb-2" src="/src/assets/ts.svg" alt="TypeScript logo" />
+          <img class="w-10 h-10 mb-2 pointer-events-none select-none" src="/src/assets/ts.svg" alt="TypeScript logo" />
           <span class="font-semibold">TypeScript</span>
         </div>
         <div class="flex flex-col items-center">
-          <img class="w-10 h-10 mb-2" src="/src/assets/node.svg" />
+          <img class="w-10 h-10 mb-2 pointer-events-none select-none" src="/src/assets/node.svg" />
           <span class="font-semibold">Node.js</span>
         </div>
         <div class="flex flex-col items-center">
-          <img class="w-10 h-10 mb-2" src="/src/assets/postgres.svg" alt="PostgreSQL logo" />
+          <img class="w-10 h-10 mb-2 pointer-events-none select-none" src="/src/assets/postgres.svg" alt="PostgreSQL logo" />
           <span class="font-semibold">PostgreSQL</span>
         </div>
         <div class="flex flex-col items-center">
-          <img class="w-10 h-10 mb-2" src="/src/assets/blender.png" alt="Blender logo" />
+          <img class="w-10 h-10 mb-2 pointer-events-none select-none" src="/src/assets/blender.png" alt="Blender logo" />
           <span class="font-semibold">Blender</span>
         </div>
       </div>
@@ -95,13 +95,18 @@ onMounted(async () => {
     <section class="max-w-6xl py-20 px-6 mx-auto" v-if="featuredProjects.length > 0">
       <h2 class="text-3xl font-bold mb-12 text-center" id="featured">Featured Projects</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-10" :class="featuredProjects.length > 2 && 'lg:grid-cols-3'">
-        <div class="group cursor-pointer duration-200 transform hover:scale-105 rounded-2xl shadow-xl bg-white/60 backdrop-blur-md border border-gray-200 hover:border-gray-900 transition-all" v-for="project in featuredProjects" :key="project.id">
+        <div
+          class="group rounded-2xl shadow-xl bg-white/60 backdrop-blur-md border border-gray-200 transition-all"
+          :class="project.link && 'cursor-pointer duration-200 transform hover:scale-105 hover:border-gray-900'"
+          v-for="project in featuredProjects"
+          :key="project.id"
+        >
           <div class="flex items-center gap-3 p-6 pb-0">
-            <img class="w-12 h-12" :src="project.image" :alt="project.name + ' icon'" />
+            <img class="w-12 h-12 pointer-events-none select-none" :src="project.image" :alt="project.name + ' icon'" />
             <h3 class="text-lg font-semibold">{{ project.name }}</h3>
           </div>
           <div class="p-6 pt-2">
-            <p class="text-sm text-gray-500 group-hover:underline">{{ project.description }}</p>
+            <p class="text-sm text-gray-500" :class="project.link && 'group-hover:underline'">{{ project.description }}</p>
           </div>
         </div>
       </div>
@@ -110,13 +115,18 @@ onMounted(async () => {
     <section class="max-w-6xl py-20 px-6 mx-auto" v-if="latestProjects.length > 0">
       <h2 class="text-3xl font-bold mb-12 text-center" id="featured">Latest Projects</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-10" :class="latestProjects.length > 2 && 'lg:grid-cols-3'">
-        <div class="group cursor-pointer duration-200 transform hover:scale-105 rounded-2xl shadow-xl bg-white/60 backdrop-blur-md border border-gray-200 hover:border-gray-900 transition-all" v-for="project in latestProjects" :key="project.id">
+        <div
+          class="group rounded-2xl shadow-xl bg-white/60 backdrop-blur-md border border-gray-200 transition-all"
+          :class="project.link && 'cursor-pointer duration-200 transform hover:scale-105 hover:border-gray-900'"
+          v-for="project in latestProjects"
+          :key="project.id"
+        >
           <div class="flex items-center gap-3 p-6 pb-0">
-            <img class="w-12 h-12" :src="project.image" :alt="project.name + ' icon'" />
+            <img class="w-12 h-12 pointer-events-none select-none" :src="project.image" :alt="project.name + ' icon'" />
             <h3 class="text-lg font-semibold mb-2">{{ project.name }}</h3>
           </div>
           <div class="p-6 pt-2">
-            <p class="text-sm text-gray-500 group-hover:underline">{{ project.description }}</p>
+            <p class="text-sm text-gray-500" :class="project.link && 'group-hover:underline'">{{ project.description }}</p>
           </div>
         </div>
       </div>
