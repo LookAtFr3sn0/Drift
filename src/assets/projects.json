@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Whisper",
-    "description": "A safe and secure way to send messages to your friends.",
+    "description": "A safe and secure way to talk to your friends.",
     "featured": true,
     "image": "/assets/whisper.svg"
   }
